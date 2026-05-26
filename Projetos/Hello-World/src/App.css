@@ -1,5 +1,3 @@
-
-
 .App {
   display: flex;
   flex-direction: column;
@@ -14,4 +12,17 @@
   color: red;
   font-weight: bolder;
   font-size: 3rem;
+}
+
+.button {
+  font-size: 1rem;
+  background-color: brown;
+  padding: 5px;
+  margin-bottom: 1rem;
+
+}
+
+.button:hover {
+  background-color: #fff;
+  color: black;
 }
