@@ -1,0 +1,10 @@
+
+
+.imagens {
+    width: 300px;
+    
+}
+
+.imagens img {
+    max-width: 100%;
+}
