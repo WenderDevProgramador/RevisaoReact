@@ -2,7 +2,9 @@
 import './App.css'
 // Imagem em assets
 import viaLactia from './assets/via-lactea.jpg'
+import CondicionalRender from './components/CondicionalRender'
 import Data from './components/Data'
+import ListRender from './components/ListRender'
 
 // Importar os hooks
 
@@ -22,6 +24,11 @@ function App() {
       </div>
 
       <Data/>
+      <ListRender/>
+
+  </div>
+  <div>
+    <CondicionalRender/>
   </div>
     </>
   )
