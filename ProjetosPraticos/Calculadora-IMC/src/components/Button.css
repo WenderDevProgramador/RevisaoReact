@@ -1,0 +1,19 @@
+button {
+    text-align: center;
+    padding: 1rem 1.5rem;
+    background-color: #b4251b;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    opacity: .8;
+    flex: 1;
+
+}
+
+button:hover {
+    opacity: 1;
+}
+
+#clear-btn {
+    background-color:#444;
+}
