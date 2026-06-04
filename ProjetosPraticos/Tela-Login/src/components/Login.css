@@ -1,0 +1,104 @@
+.container {
+    width: 420px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+.container h1 {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+.input-field {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 20px 0;
+}
+
+.input-field input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    outline: none;
+    border: 1.5px solid rgba(255, 255, 255, 0.3);
+    border-radius: 40px;
+    font-size: 15px;
+    color: #fff;
+    padding: 0 50px 0 20px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-field input:focus {
+    border-color: #fff;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+}
+
+.input-field input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.input-field .icon {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.recall-forget {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin: 10px 0 20px;
+    color: #fff;
+}
+
+.recall-forget a, .signup-link a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.recall-forget a:hover, .signup-link a:hover {
+    color: #ddd;
+    text-decoration: underline;
+}
+
+.container button {
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(135deg, #fff, #ddd);
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    text-shadow: none;
+}
+
+.container button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+    
+}
+
+.signup-link {
+    font-size: 14px;
+    text-align: center;
+    margin: 20px 0 10px;
+    color: #fff;
+}

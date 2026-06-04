@@ -1,0 +1,21 @@
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Helvetica, sans-serif;
+    text-shadow:  #000 1px 1px;
+    
+}
+
+.App {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #000000;
+    background-image: url('./assets/image.png');
+    background-size: cover;
+    background-position: center;
+
+}
