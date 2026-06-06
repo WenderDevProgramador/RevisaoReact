@@ -1,9 +1,53 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
+/* Reset global */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Barlow', sans-serif;
+    color: #333;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
+/* Fonte base responsiva */
+html {
+    font-size: 100%;
+    /* ~16px */
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 90%;
+        /* reduz em smartphones */
+    }
+}
+
+@media (min-width: 1200px) {
+    html {
+        font-size: 110%;
+        /* aumenta em telas grandes */
+    }
+}
+
+/* Corpo flexível */
+body {
+    background-color: #f9fafc;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Parágrafos */
+p {
+    color: #777;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 480px) {
+    p {
+        font-size: 0.9rem;
+    }
+}

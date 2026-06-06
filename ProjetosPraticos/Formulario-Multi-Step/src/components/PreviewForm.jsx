@@ -2,7 +2,9 @@
 
 const PreviewForm = () => {
     return (
-        <div><h2>PreviewForm</h2></div>
+        <div>
+            <h2>PreviewForm</h2>
+        </div>
     )
 }
 

@@ -2,7 +2,9 @@
 
 const Thanks = () => {
     return (
-        <div><h2>Thanks</h2></div>
+        <div>
+            <h2>Thanks</h2>
+        </div>
     )
 }
 
