@@ -2,7 +2,7 @@ import { GrFormNext, GrFormPrevious } from 'react-icons/gr'
 import {FiSend} from 'react-icons/fi'
 
 import UserForm from './components/UserForm'
-import PreviewForm from './components/PreviewForm'
+import ReviewForm from './components/ReviewForm'
 import Thanks from './components/Thanks'
 import Steps from './components/Steps'
 
@@ -14,7 +14,7 @@ import './App.css'
 
 function App() {
 
-  const formComponents = [<UserForm />, <PreviewForm />, <Thanks />];
+  const formComponents = [<UserForm />, <ReviewForm />, <Thanks />];
 
   const { currentStep, currentComponent, changeStep, isLastStep , isFirstStep} = useForm(formComponents);
 
