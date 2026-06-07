@@ -8,13 +8,31 @@ import Steps from './components/Steps'
 
 // Hooks
 import { useForm } from './hooks/useForm'
+import { useState } from 'react'
 
 import './App.css'
 
+const formTemplate  = {
+    name: '',
+    email: '',
+    review: '',
+    comment: ''
+  }
+
 
 function App() {
+  const [data, setData] = useState(formTemplate);
 
-  const formComponents = [<UserForm />, <ReviewForm />, <Thanks />];
+  const updateHandler = (key, value) => {
+    setData(prev => {
+      return {...prev, [key]: value}
+    })
+  }
+
+  const formComponents = [
+  <UserForm data={data} updateHandler={updateHandler}/>, 
+  <ReviewForm data={data} updateHandler={updateHandler}/>, 
+  <Thanks data={data}/>];
 
   const { currentStep, currentComponent, changeStep, isLastStep , isFirstStep} = useForm(formComponents);
 
