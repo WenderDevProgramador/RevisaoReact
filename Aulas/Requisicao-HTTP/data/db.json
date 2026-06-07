@@ -1,5 +1,120 @@
 {
-    "products": [
-        
-    ]
+  "products": [
+    {
+      "name": "capa de chuva",
+      "price": "50.50",
+      "id": "5"
+    },
+    {
+      "name": "camiseta básica",
+      "price": "39.90",
+      "id": "6"
+    },
+    {
+      "name": "calça jeans",
+      "price": "120.00",
+      "id": "7"
+    },
+    {
+      "name": "tênis esportivo",
+      "price": "250.00",
+      "id": "8"
+    },
+    {
+      "name": "mochila escolar",
+      "price": "89.99",
+      "id": "9"
+    },
+    {
+      "name": "relógio digital",
+      "price": "199.90",
+      "id": "10"
+    },
+    {
+      "name": "óculos de sol",
+      "price": "150.00",
+      "id": "11"
+    },
+    {
+      "name": "jaqueta de couro",
+      "price": "350.00",
+      "id": "12"
+    },
+    {
+      "name": "boné",
+      "price": "45.00",
+      "id": "13"
+    },
+    {
+      "name": "meias esportivas",
+      "price": "25.00",
+      "id": "14"
+    },
+    {
+      "name": "camisa social",
+      "price": "99.90",
+      "id": "15"
+    },
+    {
+      "name": "sapato social",
+      "price": "220.00",
+      "id": "16"
+    },
+    {
+      "name": "blusa de lã",
+      "price": "130.00",
+      "id": "17"
+    },
+    {
+      "name": "shorts jeans",
+      "price": "75.00",
+      "id": "18"
+    },
+    {
+      "name": "vestido casual",
+      "price": "140.00",
+      "id": "19"
+    },
+    {
+      "name": "sandália feminina",
+      "price": "110.00",
+      "id": "20"
+    },
+    {
+      "name": "camiseta estampada",
+      "price": "49.90",
+      "id": "21"
+    },
+    {
+      "name": "blazer masculino",
+      "price": "299.00",
+      "id": "22"
+    },
+    {
+      "name": "saia midi",
+      "price": "89.00",
+      "id": "23"
+    },
+    {
+      "name": "chinelo",
+      "price": "35.00",
+      "id": "24"
+    },
+    {
+      "name": "Teste",
+      "price": "2",
+      "id": "GjPIO6sbZJ8"
+    },
+    {
+      "name": "Pao",
+      "price": "3",
+      "id": "ex_ULABk4WY"
+    },
+    {
+      "name": "Pao",
+      "price": "3",
+      "id": "zL8-wpU0OHQ"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
