@@ -1,5 +1,6 @@
 
 import { useState, useEffect } from 'react'
+import  { useFetch} from './hooks/useFetch'
 
 
 import './App.css'
@@ -12,21 +13,27 @@ function App() {
 
   const [products, setProducts] = useState([]);
 
-  useEffect(() => {
+  // Custom hook 
 
-    async function getData() {
-      const res = await fetch(url)
+  const { data: items } = useFetch(url)
 
-      const data = await res.json()
 
-      console.log(data)
 
-      setProducts(data)
-    }
+  // useEffect(() => {
 
-    getData()
+  //   async function getData() {
+  //     const res = await fetch(url)
 
-  }, [])
+  //     const data = await res.json()
+
+  //     console.log(data)
+
+  //     setProducts(data)
+  //   }
+
+  //   getData()
+
+  // }, [])
 
   // Envio de dados:
 
@@ -64,7 +71,7 @@ function App() {
     <div className="App">
       <h1>HTTP React</h1>
       <ul>
-        {products.map((product) =>
+        {items && items.map((product) =>
           <li key={product.id}>{`${product.name} - R$ ${product.price}`}</li>
         )}
       </ul>
