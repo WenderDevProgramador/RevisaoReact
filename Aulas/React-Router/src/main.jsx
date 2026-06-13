@@ -11,13 +11,26 @@ import {
 
 } from 'react-router-dom'
 
-const router = createBrowserRouter ([{
-  path:"/",
-  element: <App/>
-}])
+import Contact from './routes/Contact.jsx'
+import ErrorPage from './routes/ErrorPage.jsx'
+
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+    errorElement: <ErrorPage/>,
+  },
+  {
+    path: "contact",
+    element: <Contact/>,
+  }
+
+
+])
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <App />
+    <RouterProvider router= {router} />
   </StrictMode>,
 )
