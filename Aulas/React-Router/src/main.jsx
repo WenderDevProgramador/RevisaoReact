@@ -7,7 +7,7 @@ import App from './App.jsx'
 import {
   createBrowserRouter,
   RouterProvider,
-  Router
+  Router, Navigate
 
 } from 'react-router-dom'
 
@@ -16,6 +16,7 @@ import ErrorPage from './routes/ErrorPage.jsx'
 import Home from './routes/Home.jsx'
 import Products from './routes/Products.jsx'
 import Info from './routes/Info.jsx'
+import Search from './routes/Search.jsx'
 
 
 
@@ -44,6 +45,15 @@ const router = createBrowserRouter([
       {
         path: "products/:id/info",
         element: <Info/>,
+      },
+
+      {
+        path: "search",
+        element: <Search/>,
+      },
+      {
+        path: "teste",
+        element: <Navigate to={"/"}/>
       }
     ]
   },
