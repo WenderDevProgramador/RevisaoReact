@@ -3,7 +3,7 @@ import { createContext, useReducer } from "react";
 import questions from '../../data/questions_complete.js'
 
 
-const STAGES = ['Start','Category','Playing','End']
+const STAGES = ['Start', 'Category', 'Playing', 'End']
 
 const initialState = {
     gameStage: STAGES[0],
@@ -11,14 +11,16 @@ const initialState = {
     currentQuestion: 0,
     score: 0,
     answerSelected: false,
+    help: false,
+    optionsToHide: null
 }
 
-const quizReducer = (state,action) => {
+const quizReducer = (state, action) => {
 
     console.log(state, action);
 
 
-    switch(action.type) {
+    switch (action.type) {
         case 'CHANGE_STATE':
             return {
                 ...state,
@@ -28,7 +30,7 @@ const quizReducer = (state,action) => {
             let quizQuestions = null;
 
             state.questions.forEach((question) => {
-                if(question.category === action.payload) {
+                if (question.category === action.payload) {
                     quizQuestions = question.questions
                 }
             })
@@ -51,7 +53,7 @@ const quizReducer = (state,action) => {
             const nextQuestion = state.currentQuestion + 1;
             let endGame = false
 
-            if(!state.questions[nextQuestion]) {
+            if (!state.questions[nextQuestion]) {
                 endGame = true;
             }
 
@@ -60,6 +62,7 @@ const quizReducer = (state,action) => {
                 currentQuestion: nextQuestion,
                 gameStage: endGame ? STAGES[3] : state.gameStage,
                 answerSelected: false,
+                help: false,
             };
 
         case 'NEW_GAME':
@@ -67,11 +70,11 @@ const quizReducer = (state,action) => {
 
         case 'CHECK_ANSWER':
 
-            if(state.answerSelected) return state
+            if (state.answerSelected) return state
 
             const answer = action.payload.answer
             const option = action.payload.option
-            let  correctAnswer = 0
+            let correctAnswer = 0
 
             if (answer === option) correctAnswer = 1;
 
@@ -80,6 +83,34 @@ const quizReducer = (state,action) => {
                 score: state.score + correctAnswer,
                 answerSelected: option,
             }
+
+        case 'SHOW_TIP':
+            return {
+                ...state,
+                help: true,
+
+            }
+
+        case 'REMOVE_OPTION':
+            const questionWithoutOption = state.questions[state.currentQuestion]
+
+            let repeat = true
+            let optionsToHide
+
+            questionWithoutOption.options.forEach((option) => {
+                if (option !== questionWithoutOption.answer && repeat) {
+                    optionsToHide = option
+                    repeat = false
+                }
+            });
+
+            return {
+                ...state,
+                optionsToHide,
+                help: true,
+            }
+
+
 
 
         default:
